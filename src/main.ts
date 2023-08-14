@@ -7,8 +7,10 @@ import { createPinia } from "pinia";
 
 export const pinia = createPinia();
 
+const baseRote =
+  process.env.NODE_ENV === "production" ? "/Coffee-market-vue/" : "/";
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(baseRote),
   routes,
 });
 

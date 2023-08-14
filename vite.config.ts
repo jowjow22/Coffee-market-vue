@@ -5,7 +5,7 @@ import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: "/Coffee-market-vue/",
+  base: process.env.NODE_ENV === "production" ? "/Coffee-market-vue/" : "/",
   resolve: {
     alias: [
       {

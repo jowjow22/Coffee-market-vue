@@ -52,7 +52,7 @@
     <section class="flex flex-col gap-y-8 mb-20 max-w-fit mx-auto">
       <h1 class="title-l mb-10">Nossos cafés</h1>
       <div
-        class="flex flex-row flex-wrap gap-x-9 gap-y-10 items-center max-w-[90vw]"
+        class="flex flex-row flex-wrap gap-x-9 gap-y-10 items-center justify-center lg:justify-start max-w-[90vw]"
       >
         <CoffeeCard
           v-for="coffee in coffeeList"

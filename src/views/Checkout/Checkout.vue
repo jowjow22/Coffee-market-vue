@@ -3,7 +3,7 @@
     @submit.prevent
     class="flex flex-wrap gap-y-6 gap-10 h-screen px-4 justify-center"
   >
-    <div class="my-auto flex flex-row flex-wrap gap-y-10 gap-x-16">
+    <div class="mt-[30%] lg:my-auto flex flex-row flex-wrap gap-y-10 gap-x-16">
       <section class="flex flex-col gap-y-4">
         <p class="title-xs">Complete seu pedido</p>
         <Paper large :rounded="false" class="flex flex-col gap-y-4">

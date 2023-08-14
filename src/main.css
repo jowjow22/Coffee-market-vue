@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .path {
+    stroke-dasharray: 15;
+  }
+}
+
+@layer utilities{
+  .title-l, .title-m, .title-s, .title-xs, .title-xl{
+    font-family: 'Baloo 2', sans-serif;
+  }
+  .text-l, .text-m, .text-s, .text-xs, .tag, .button-g, .button-m{
+    font-family: 'Roboto', sans-serif;
+  }
+  .title-xl{
+    font-size: 48px;
+    line-height: 130%;
+    font-weight: 800;
+  }
+  .title-l{
+    font-size: 32px;
+    line-height: 130%;
+    font-weight: 800;
+  }
+  .title-m{
+    font-size: 24px;
+    line-height: 130%;
+    font-weight: 800;
+  }
+  .title-s{
+    font-size: 20px;
+    line-height: 130%;
+    font-weight: 700;
+  }
+  .title-xs{
+    font-size: 18px;
+    line-height: 130%;
+    font-weight: 700;
+  }
+
+  .text-l{
+    font-size: 20px;
+    line-height: 130%;
+    font-weight: 400;
+  }
+  .text-m{
+    font-size: 16px;
+    line-height: 130%;
+  }
+  .text-s{
+    font-size: 14px;
+    line-height: 130%;
+    font-weight: 400;
+  }
+  .text-xs{
+    font-size: 12px;
+    line-height: 130%;
+    font-weight: 400;
+  }
+
+  .tag{
+    font-size: 10px;
+    line-height: 130%;
+    font-weight: 700;
+  }
+  .button-g{
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .button-m{
+    font-size: 12px;
+    font-weight: 400;
+  }
+  p, span{
+    @apply text-m; 
+   }
+}

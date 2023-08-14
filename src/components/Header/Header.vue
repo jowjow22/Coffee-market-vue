@@ -26,8 +26,10 @@ import { computed } from "vue";
 const orderStore = useOrderStore();
 
 const formatedAdress = computed(() => {
-  const { city, state } = orderStore.getAdress;
+  const address = orderStore.getAddress;
 
-  return `${city}, ${state.toUpperCase()}`;
+  if (!address) return "";
+
+  return `${address.city}, ${address.state.toUpperCase()}`;
 });
 </script>

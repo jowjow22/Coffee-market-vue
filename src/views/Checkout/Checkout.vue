@@ -184,7 +184,7 @@ import {
   PhCreditCard,
   PhBank,
 } from "@phosphor-icons/vue";
-import { computed, ref } from "vue";
+import { computed, onBeforeMount, ref } from "vue";
 import CartCoffeeCard from "@/components/CartCoffeeCard/CartCoffeeCard.vue";
 import { useCartStore } from "@/store/cartStore";
 import { useOrderStore } from "@/store/orderStore";
@@ -218,6 +218,13 @@ const address = ref<IAddress>({
   city: "",
   state: "",
   cep: "",
+});
+
+onBeforeMount(() => {
+  const addressSaved = orderStore.getAddress;
+  if (addressSaved) {
+    address.value = addressSaved;
+  }
 });
 
 const selected = ref<PaymentMethod>("");

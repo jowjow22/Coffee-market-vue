@@ -12,7 +12,7 @@ export const useOrderStore = defineStore(STORE_NAME, {
     orderTotalPrice: ({ order }) => {
       return order.total + order.deliveryValue;
     },
-    getAdress: ({ order }) => {
+    getAddress: ({ order }) => {
       return order.address;
     },
     getPaymentMethod: ({ order }) => {

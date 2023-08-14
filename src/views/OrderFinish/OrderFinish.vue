@@ -57,7 +57,7 @@ import { computed } from "vue";
 const orderStore = useOrderStore();
 
 const formatedAdress = computed(() => {
-  const { street, number, neighborhood, city, state } = orderStore.getAdress;
+  const { street, number, neighborhood, city, state } = orderStore.getAddress;
   return `Entrega em <span class="text-m font-bold text-base-text">${street}, ${number}</span><br> ${neighborhood} - ${city}, ${state}`;
 });
 

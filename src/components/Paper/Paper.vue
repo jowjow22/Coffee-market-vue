@@ -1,5 +1,5 @@
 <template>
-  <div
+  <article
     v-if="gradientBorder"
     class="h-full w-full rounded-md bg-gradient-to-r from-yellow to-purple p-[2px]"
     :class="[{ 'rounded-tr-[36px]  rounded-bl-[36px]': props.rounded }]"
@@ -13,17 +13,17 @@
     >
       <slot> </slot>
     </div>
-  </div>
-  <div
+  </article>
+  <article
     v-else
-    class="bg-base-card p-5 rounded-lg"
+    class="bg-base-card p-12 rounded-lg"
     :class="[
       { 'rounded-tr-[36px]  rounded-bl-[36px]': props.rounded },
-      { 'p-12': large },
+      { 'p-5': !large },
     ]"
   >
     <slot></slot>
-  </div>
+  </article>
 </template>
 <script lang="ts" setup>
 const props = defineProps({

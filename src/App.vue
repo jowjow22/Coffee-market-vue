@@ -8,15 +8,15 @@ import { useCartStore } from "@/store/cartStore";
 import { useOrderStore } from "./store/orderStore";
 import { onBeforeMount } from "vue";
 import { onMounted } from "vue";
+import { captureException } from "@sentry/vue";
 
 const cartStore = useCartStore();
 const orderStore = useOrderStore();
 
 onMounted(() => {
+  captureException("Test message");
   // @ts-ignore
   myUndefinedFunction();
-  console.log(import.meta.env.VUE_APP_ENV_DNS)
-  console.log(import.meta.env.SENTRY_AUTH_TOKEN)
 });
 
 onBeforeMount(() => {

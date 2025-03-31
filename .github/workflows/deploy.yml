@@ -39,6 +39,8 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build && npm run deploy
+        env:
+           VITE_VUE_APP_ENV_DNS: ${{ vars.VITE_VUE_APP_ENV_DNS }}
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact

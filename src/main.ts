@@ -4,6 +4,7 @@ import "./main.css";
 import routes from "./routes";
 import { createRouter, createWebHistory } from "vue-router";
 import { createPinia } from "pinia";
+import * as Sentry from "@sentry/vue";
 
 export const pinia = createPinia();
 
@@ -13,5 +14,11 @@ const router = createRouter({
   history: createWebHistory(baseRote),
   routes,
 });
+const app = createApp(App)
 
-createApp(App).use(router).use(pinia).mount("#app");
+Sentry.init({
+  app,
+  dsn: import.meta.env.VUE_APP_SENTRY_DSN,
+});
+
+app.use(router).use(pinia).mount("#app");

@@ -18,7 +18,7 @@ const app = createApp(App)
 
 Sentry.init({
   app,
-  dsn: import.meta.env.VUE_APP_SENTRY_DSN,
+  dsn: import.meta.env.VITE_VUE_APP_ENV_DNS,
 });
 
 app.use(router).use(pinia).mount("#app");

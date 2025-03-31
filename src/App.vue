@@ -15,6 +15,8 @@ const orderStore = useOrderStore();
 onMounted(() => {
   // @ts-ignore
   myUndefinedFunction();
+  console.log(import.meta.env.VUE_APP_ENV_DNS)
+  console.log(import.meta.env.SENTRY_AUTH_TOKEN)
 });
 
 onBeforeMount(() => {
